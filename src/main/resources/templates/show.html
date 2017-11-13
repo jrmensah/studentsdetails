@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Show All Students</title>
+    <!-- adding fonts to website to make it more attractive. Use google fonts bt referencing the css on the Google Fonts APIs CDN-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css"/>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
@@ -15,12 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <ul class="nav navber-nav navbar-left">
-        <li><a href="detailform.html">Add a Student</a></li>
-        <li><a>Show All Students</a></li>
-        <li><a href="show.html">Delete a Student</a></li>
-    </ul>
-</div>
+
 <a href="/">Show All Students</a><br/>
 First Name:<span th:text="${student.firstName}"></span><br/>
 Last Name:<span th:text="${student.lastName}"></span><br/>
@@ -28,5 +23,6 @@ Email Address:<span th:text="${student.email}"></span><br/>
 Phone Number:<span th:number="${student.phoneNum}"></span><br/>
 Mailing Address:<span th:text="${student.mailAddress}"></span><br/>
 <a th:href="@{/delete/{id} (id=${student.id})}">Delete Student</a>
+</div>
 </body>
 </html>
