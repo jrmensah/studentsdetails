@@ -25,7 +25,7 @@
 First Name:<span th:text="${student.firstName}"></span><br/>
 Last Name:<span th:text="${student.lastName}"></span><br/>
 Email Address:<span th:text="${student.email}"></span><br/>
-Phone Number:<span th:text="${student.phoneNum}"></span><br/>
+Phone Number:<span th:number="${student.phoneNum}"></span><br/>
 Mailing Address:<span th:text="${student.mailAddress}"></span><br/>
 <a th:href="@{/delete/{id} (id=${student.id})}">Delete Student</a>
 </body>
